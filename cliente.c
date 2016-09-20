@@ -44,7 +44,7 @@ int main() {
     // Enviamos un valor bandera, indicando que se mandarán las coordenadas del asteroide
     sendto(s, (char *)coord, 2 * sizeof(int), 0, (struct sockaddr *) &msg_to_server_addr, sizeof(msg_to_server_addr));
 
-    int inix, iniy, ultx, ulty, theta = 0;
+    int theta = 0;
     // Utilizamos un random para determinar el incremento del ángulo que se hará
     // dicho incremento estará entre 30 y 46 grados. 
     for (; theta <= 360; theta += ANGULO) {
